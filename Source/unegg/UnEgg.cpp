@@ -15,6 +15,9 @@
 #include <iostream>
 #include <locale>
 #include <math.h>
+#ifdef __linux__
+#include <unistd.h>
+#endif
 
 #ifndef __MINGW32__
 #include <sys/ioctl.h>

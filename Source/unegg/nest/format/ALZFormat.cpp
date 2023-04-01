@@ -432,7 +432,7 @@ bool ALZFormat::IsTargetDir(alz::File* file)
 
 int ALZFormat::PreprocessDecrypt(size_t index, alz::File* header)
 {
-    char password[alz::MAX_PASSWORD_LEN];
+    char password[alz::MAX_PASSWORD_LEN + 1];
     memset(password, 0, sizeof(password));
 
     decoder_ = new ZipDecoder();

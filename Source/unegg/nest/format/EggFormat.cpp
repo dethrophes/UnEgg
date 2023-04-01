@@ -904,7 +904,7 @@ int EggFormat::ExtractIndividualFile(size_t index, OutputStream* stream)
 
 int EggFormat::PreprocessDecrypt(size_t index, egg::EncryptField* header)
 {
-    char password[egg::MAX_PASSWORD_LEN];
+    char password[egg::MAX_PASSWORD_LEN + 1];
     memset(password, 0, sizeof(password));
 
     decoder_ = NULL;
